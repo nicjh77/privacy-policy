@@ -33,17 +33,9 @@
             margin-top: 32px;
             margin-bottom: 12px;
         }
-        p {
-            margin-bottom: 16px;
-            font-size: 16px;
-        }
-        ul {
-            margin: 0 0 16px 24px;
-        }
-        li {
-            margin-bottom: 8px;
-            font-size: 16px;
-        }
+        p { margin-bottom: 16px; font-size: 16px; }
+        ul { margin: 0 0 16px 24px; }
+        li { margin-bottom: 8px; font-size: 16px; }
         .footer {
             margin-top: 48px;
             padding-top: 24px;
@@ -51,58 +43,132 @@
             font-size: 14px;
             color: #888;
         }
+        a { color: #6B1C2A; }
+        .lang-toggle {
+            display: flex;
+            gap: 0;
+            margin-bottom: 32px;
+        }
+        .lang-btn {
+            padding: 10px 24px;
+            border: 2px solid #6B1C2A;
+            background: #fff;
+            color: #6B1C2A;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .lang-btn:first-child {
+            border-radius: 6px 0 0 6px;
+        }
+        .lang-btn:last-child {
+            border-radius: 0 6px 6px 0;
+            border-left: none;
+        }
+        .lang-btn.active {
+            background: #6B1C2A;
+            color: #fff;
+        }
+        .lang-content {
+            display: none;
+        }
+        .lang-content.active {
+            display: block;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Privacy Policy</h1>
-        <p class="last-updated">Last updated: May 7, 2026</p>
+        <div class="lang-toggle">
+            <button class="lang-btn active" onclick="switchLang('en')">English</button>
+            <button class="lang-btn" onclick="switchLang('ko')">한국어</button>
+        </div>
 
-        <p>Prestige Institute ("we", "our", or "us") operates the Prestige Institute Staff mobile application (the "App"). This Privacy Policy explains how we collect, use, and protect information from our employees ("users") who use the App.</p>
+        <!-- English -->
+        <div id="en" class="lang-content active">
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last updated: May 7, 2026</p>
+            <p>Prestige Institute ("we", "our", or "us") operates the Prestige Institute Staff mobile application (the "App"). This Privacy Policy explains how we collect, use, and protect information from our employees ("users") who use the App.</p>
+            <h2>1. Information We Collect</h2>
+            <p>We collect the following types of information:</p>
+            <ul>
+                <li><strong>Account Information:</strong> Employee ID, name, and login credentials provided by your employer.</li>
+                <li><strong>Attendance Data:</strong> Clock-in and clock-out times recorded through the App.</li>
+                <li><strong>Device Information:</strong> Device type, operating system version, and app version for troubleshooting purposes.</li>
+                <li><strong>Camera Access:</strong> The App may request camera access for QR code scanning related to attendance management. No photos or videos are stored.</li>
+            </ul>
+            <h2>2. How We Use Your Information</h2>
+            <p>We use the collected information for the following purposes:</p>
+            <ul>
+                <li>Managing employee attendance and work hours</li>
+                <li>Sharing weekly vision and company updates</li>
+                <li>Providing internal communication within the organization</li>
+                <li>Improving the App's functionality and user experience</li>
+            </ul>
+            <h2>3. Data Sharing</h2>
+            <p>We do not sell, trade, or share your personal information with third parties. Your data is only accessible to authorized personnel within Prestige Institute for employment management purposes.</p>
+            <h2>4. Data Security</h2>
+            <p>We implement appropriate security measures to protect your personal information against unauthorized access, alteration, or destruction. All data is transmitted using secure, encrypted connections.</p>
+            <h2>5. Data Retention</h2>
+            <p>We retain your information for as long as you are employed with Prestige Institute and for a reasonable period thereafter as required by applicable laws and regulations.</p>
+            <h2>6. Your Rights</h2>
+            <p>You have the right to access, correct, or request deletion of your personal data. To exercise these rights, please contact your HR department or reach out to us using the contact information below.</p>
+            <h2>7. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. Any changes will be communicated through the App or via internal company channels.</p>
+            <h2>8. Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+            <p>Prestige Institute<br>Email: <a href="mailto:info@prestigei.com">info@prestigei.com</a></p>
+        </div>
 
-        <h2>1. Information We Collect</h2>
-        <p>We collect the following types of information:</p>
-        <ul>
-            <li><strong>Account Information:</strong> Employee ID, name, and login credentials provided by your employer.</li>
-            <li><strong>Attendance Data:</strong> Clock-in and clock-out times recorded through the App.</li>
-            <li><strong>Device Information:</strong> Device type, operating system version, and app version for troubleshooting purposes.</li>
-            <li><strong>Camera Access:</strong> The App may request camera access for QR code scanning related to attendance management. No photos or videos are stored.</li>
-        </ul>
-
-        <h2>2. How We Use Your Information</h2>
-        <p>We use the collected information for the following purposes:</p>
-        <ul>
-            <li>Managing employee attendance and work hours</li>
-            <li>Sharing weekly vision and company updates</li>
-            <li>Providing internal communication within the organization</li>
-            <li>Improving the App's functionality and user experience</li>
-        </ul>
-
-        <h2>3. Data Sharing</h2>
-        <p>We do not sell, trade, or share your personal information with third parties. Your data is only accessible to authorized personnel within Prestige Institute for employment management purposes.</p>
-
-        <h2>4. Data Security</h2>
-        <p>We implement appropriate security measures to protect your personal information against unauthorized access, alteration, or destruction. All data is transmitted using secure, encrypted connections.</p>
-
-        <h2>5. Data Retention</h2>
-        <p>We retain your information for as long as you are employed with Prestige Institute and for a reasonable period thereafter as required by applicable laws and regulations.</p>
-
-        <h2>6. Your Rights</h2>
-        <p>You have the right to access, correct, or request deletion of your personal data. To exercise these rights, please contact your HR department or reach out to us using the contact information below.</p>
-
-        <h2>7. Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. Any changes will be communicated through the App or via internal company channels.</p>
-
-        <h2>8. Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, please contact us at:</p>
-        <p>
-            Prestige Institute<br>
-            Email: info@prestigei.com
-        </p>
+        <!-- 한국어 -->
+        <div id="ko" class="lang-content">
+            <h1>개인정보처리방침</h1>
+            <p class="last-updated">최종 업데이트: 2026년 5월 7일</p>
+            <p>Prestige Institute(이하 "회사")는 Prestige Institute Staff 모바일 애플리케이션(이하 "앱")을 운영합니다. 본 개인정보처리방침은 앱을 사용하는 직원(이하 "사용자")의 정보를 어떻게 수집, 사용, 보호하는지 설명합니다.</p>
+            <h2>1. 수집하는 정보</h2>
+            <p>회사는 다음과 같은 정보를 수집합니다:</p>
+            <ul>
+                <li><strong>계정 정보:</strong> 고용주가 제공하는 직원 ID, 이름, 로그인 자격 증명</li>
+                <li><strong>출퇴근 데이터:</strong> 앱을 통해 기록되는 출근 및 퇴근 시간</li>
+                <li><strong>기기 정보:</strong> 문제 해결을 위한 기기 유형, 운영체제 버전, 앱 버전</li>
+                <li><strong>카메라 접근:</strong> 출퇴근 관리를 위한 QR 코드 스캔 시 카메라 접근을 요청할 수 있습니다. 사진이나 동영상은 저장되지 않습니다.</li>
+            </ul>
+            <h2>2. 정보 사용 목적</h2>
+            <p>수집된 정보는 다음과 같은 목적으로 사용됩니다:</p>
+            <ul>
+                <li>직원 출퇴근 및 근무 시간 관리</li>
+                <li>위클리 비전 및 회사 소식 공유</li>
+                <li>사내 커뮤니케이션 제공</li>
+                <li>앱 기능 및 사용자 경험 개선</li>
+            </ul>
+            <h2>3. 정보 공유</h2>
+            <p>회사는 사용자의 개인정보를 제3자에게 판매, 거래 또는 공유하지 않습니다. 사용자의 데이터는 고용 관리 목적으로 Prestige Institute 내 권한이 있는 담당자만 접근할 수 있습니다.</p>
+            <h2>4. 정보 보안</h2>
+            <p>회사는 무단 접근, 변경 또는 파괴로부터 개인정보를 보호하기 위해 적절한 보안 조치를 시행합니다. 모든 데이터는 안전하고 암호화된 연결을 통해 전송됩니다.</p>
+            <h2>5. 정보 보유 기간</h2>
+            <p>회사는 사용자가 Prestige Institute에 재직하는 동안 및 관련 법률이 요구하는 합리적인 기간 동안 정보를 보유합니다.</p>
+            <h2>6. 사용자의 권리</h2>
+            <p>사용자는 자신의 개인정보에 대해 접근, 수정 또는 삭제를 요청할 권리가 있습니다. 이러한 권리를 행사하려면 인사부서에 연락하거나 아래 연락처로 문의해 주세요.</p>
+            <h2>7. 방침 변경</h2>
+            <p>회사는 본 개인정보처리방침을 수시로 업데이트할 수 있습니다. 변경 사항은 앱 또는 사내 커뮤니케이션 채널을 통해 안내됩니다.</p>
+            <h2>8. 문의처</h2>
+            <p>본 개인정보처리방침에 대해 궁금한 사항이 있으시면 아래로 연락해 주세요:</p>
+            <p>Prestige Institute<br>이메일: <a href="mailto:info@prestigei.com">info@prestigei.com</a></p>
+        </div>
 
         <div class="footer">
             &copy; 2026 Prestige Institute. All rights reserved.
         </div>
     </div>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+            document.getElementById(lang).classList.add('active');
+            document.querySelector('[onclick="switchLang(\'' + lang + '\')"]').classList.add('active');
+        }
+    </script>
 </body>
 </html>
